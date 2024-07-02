@@ -3,16 +3,14 @@
 curl -X POST -H "Content-Type: application/json" \
     --data '{
   "request" : {
-    "urlPathTemplate" : "/v37/contacts/{contactId}/addresses/{addressId}",
+    "urlPathTemplate" : "/v40/contacts/{contactId}/addresses/{addressId}",
     "method" : "GET",
-    "headers" : {
-    "X-Munged-Date": {
-                "before": "now",
-                "expectedOffset": 2,
-                "expectedOffsetUnit": "months"
-            },
-      "Content-Type":{
-        "equalTo": "application/json2"
+    "queryParameters" : {
+      "search_term" : {
+        "equalTo" : "WireMock"
+      },
+      "search_term2" : {
+      "equalTo" : "WireMock2"
       }
     },
     "pathParameters" : {
@@ -42,7 +40,7 @@ curl -X POST -H "Content-Type: application/json" \
 ' \
     http://localhost:8080/__admin/mappings
 
-# curl  -H "Content-Type: application/json2" -H "X-Munged-Date: 2025-06-01T00:00:00Z"  http://localhost:8080/v37/contacts/12345/addresses/99876
-
+# curl  -H "Content-Type: application/json2" -H "X-Munged-Date: 2023-06-01T00:00:00Z"  http://localhost:8080/v40/contacts/12345/addresses/99876?search_term=WireMock'&'search_term2=WireMock2
 # Try to put your data in a file, say body.json and then use
 # curl -H "Content-Type: application/json" --data @body.json http: //localhost:8080/ui/webapp/conf
+
