@@ -1,0 +1,23 @@
+{
+  "id": "ac0e40a6-9ae4-4c2b-8b23-f480c64e6720",
+  "name": "Returns the release details of the veraPDF library used by the server in the XML format",
+  "request": {
+    "method": "GET",
+    "url": "/api",
+    "headers": {
+      "Accept": {
+        "equalTo": "application/xml"
+      },
+      "Content-Type": {
+        "equalTo": "application/xml"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/xml"
+    },
+    "bodyFileName": "verapdf/200/get_api_response-200-application_xml.json"
+  }
+}

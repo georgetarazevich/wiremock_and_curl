@@ -1,0 +1,39 @@
+{
+  "id" : "362247f9-e542-4283-9ba2-9079688fa385",
+  "name" : "Простая заглушка - /v1/customer-details",
+  "request" : {
+    "port" : 8080,
+    "url" : "/v1/customer-details",
+    "method" : "GET",
+    "headers" : {
+      "Content-Type" : {
+        "contains" : "application/json"
+      },
+      "X-CUSTOMER-ID" : {
+        "matches" : ".*"
+      },
+      "X-CORRELATIONID" : {
+        "matches" : ".*"
+      }
+    },
+    "bodyPatterns" : [ ]
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+      "status" : "Success",
+      "payload" : {
+        "customerId" : "a3be9d0fc37e44e0be5e5c122d3c2453",
+        "firstName" : "FirstName",
+        "lastName" : "LastName"
+      }
+    },
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  },
+  "uuid" : "362247f9-e542-4283-9ba2-9079688fa385",
+  "persistent" : true,
+  "priority" : 1,
+  "insertionIndex" : 49
+}

@@ -1,0 +1,23 @@
+{
+  "id" : "fa6c43aa-5ba3-4c33-aebb-69533d54d555",
+  "name" : "Returns the release details of the veraPDF library used by the server in the JSON format.",
+  "request": {
+    "method": "GET",
+    "url": "/api",
+    "headers": {
+      "Accept" : {
+        "equalTo" : "application/json"
+      },
+      "Content-Type": {
+        "equalTo" : "application/json"
+      }
+    }
+},
+  "response" : {
+    "status" : 200,
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+  "bodyFileName": "verapdf/200/get_api_response-200-application_json.json"
+  }
+}
